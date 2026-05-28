@@ -1,0 +1,150 @@
+{
+    "source": "ASD Secure Cloud Blueprint \u2013 Windows Hardening Guidelines",
+    "source_file": "WindowsHardening.txt / WindowsHardening.json",
+    "asd_reference": "https://blueprint.asd.gov.au/content/files/intune-config-policies/WindowsHardening.txt",
+    "decomposition_date": "2025-01-01",
+    "total_settings_in_source": 250,
+    "total_settings_assigned": 250,
+    "profiles": [
+        {
+            "profile_key": "01_LockScreen",
+            "category": "Lock Screen & Screensaver",
+            "intune_name": "ASD24-WIN-UX-LOCK-LockScreenAndScreensaver-v1",
+            "setting_count": 8,
+            "filename": "01_LockScreen_ASD24-WIN-UX-LOCK-LockScreenAndScreensaver-v1.json"
+        },
+        {
+            "profile_key": "02_CredentialAuth",
+            "category": "Credential & Authentication Hardening",
+            "intune_name": "ASD24-WIN-CORE-CRED-CredentialAndAuthHardening-v1",
+            "setting_count": 18,
+            "filename": "02_CredentialAuth_ASD24-WIN-CORE-CRED-CredentialAndAuthHardening-v1.json"
+        },
+        {
+            "profile_key": "03_NetworkHardening",
+            "category": "Network Hardening",
+            "intune_name": "ASD24-WIN-CORE-NET-NetworkHardening-v1",
+            "setting_count": 24,
+            "filename": "03_NetworkHardening_ASD24-WIN-CORE-NET-NetworkHardening-v1.json"
+        },
+        {
+            "profile_key": "04_NTLMAndNetworkSecurity",
+            "category": "NTLM & Network Security Options",
+            "intune_name": "ASD24-WIN-CORE-NET-NTLMAndNetworkSecurity-v1",
+            "setting_count": 4,
+            "filename": "04_NTLMAndNetworkSecurity_ASD24-WIN-CORE-NET-NTLMAndNetworkSecurity-v1.json"
+        },
+        {
+            "profile_key": "05_UACPrivilegeElevation",
+            "category": "UAC & Privilege Elevation",
+            "intune_name": "ASD24-WIN-CORE-UAC-UACAndPrivilegeElevation-v1",
+            "setting_count": 10,
+            "filename": "05_UACPrivilegeElevation_ASD24-WIN-CORE-UAC-UACAndPrivilegeElevation-v1.json"
+        },
+        {
+            "profile_key": "06_UserRights",
+            "category": "User Rights Assignment",
+            "intune_name": "ASD24-WIN-CORE-UAC-UserRightsAssignment-v1",
+            "setting_count": 17,
+            "filename": "06_UserRights_ASD24-WIN-CORE-UAC-UserRightsAssignment-v1.json"
+        },
+        {
+            "profile_key": "07_AuditLogging",
+            "category": "Audit & Event Logging",
+            "intune_name": "ASD24-WIN-CORE-AUDIT-AuditAndEventLogging-v1",
+            "setting_count": 24,
+            "filename": "07_AuditLogging_ASD24-WIN-CORE-AUDIT-AuditAndEventLogging-v1.json"
+        },
+        {
+            "profile_key": "08_DefenderAV",
+            "category": "Windows Defender Antivirus",
+            "intune_name": "ASD24-WIN-SEC-AV-WindowsDefenderAntivirus-v1",
+            "setting_count": 20,
+            "filename": "08_DefenderAV_ASD24-WIN-SEC-AV-WindowsDefenderAntivirus-v1.json"
+        },
+        {
+            "profile_key": "09_DeviceGuardVBS",
+            "category": "Device Guard & VBS",
+            "intune_name": "ASD24-WIN-SEC-VBS-DeviceGuardAndVBS-v1",
+            "setting_count": 2,
+            "filename": "09_DeviceGuardVBS_ASD24-WIN-SEC-VBS-DeviceGuardAndVBS-v1.json"
+        },
+        {
+            "profile_key": "10_RemoteAccess",
+            "category": "Remote Access & Management",
+            "intune_name": "ASD24-WIN-CORE-REMOTE-RemoteAccessAndManagement-v1",
+            "setting_count": 22,
+            "filename": "10_RemoteAccess_ASD24-WIN-CORE-REMOTE-RemoteAccessAndManagement-v1.json"
+        },
+        {
+            "profile_key": "11_RemovableStorage",
+            "category": "Removable Storage & AutoPlay",
+            "intune_name": "ASD24-WIN-UX-MEDIA-RemovableStorageAndAutoPlay-v1",
+            "setting_count": 20,
+            "filename": "11_RemovableStorage_ASD24-WIN-UX-MEDIA-RemovableStorageAndAutoPlay-v1.json"
+        },
+        {
+            "profile_key": "12_DeviceInstallation",
+            "category": "Device Installation",
+            "intune_name": "ASD24-WIN-CORE-DEV-DeviceInstallation-v1",
+            "setting_count": 3,
+            "filename": "12_DeviceInstallation_ASD24-WIN-CORE-DEV-DeviceInstallation-v1.json"
+        },
+        {
+            "profile_key": "13_PowerShellScripting",
+            "category": "PowerShell & Script Execution",
+            "intune_name": "ASD24-WIN-SEC-PS-PowerShellAndScriptExecution-v1",
+            "setting_count": 4,
+            "filename": "13_PowerShellScripting_ASD24-WIN-SEC-PS-PowerShellAndScriptExecution-v1.json"
+        },
+        {
+            "profile_key": "14_LogonBootSecurity",
+            "category": "Windows Logon & Boot Security",
+            "intune_name": "ASD24-WIN-CORE-LOGON-WindowsLogonAndBootSecurity-v1",
+            "setting_count": 6,
+            "filename": "14_LogonBootSecurity_ASD24-WIN-CORE-LOGON-WindowsLogonAndBootSecurity-v1.json"
+        },
+        {
+            "profile_key": "15_GroupPolicyProcessing",
+            "category": "Group Policy & Configuration Processing",
+            "intune_name": "ASD24-WIN-CORE-GPO-GroupPolicyProcessing-v1",
+            "setting_count": 5,
+            "filename": "15_GroupPolicyProcessing_ASD24-WIN-CORE-GPO-GroupPolicyProcessing-v1.json"
+        },
+        {
+            "profile_key": "16_AppManagement",
+            "category": "Application Management & Windows Store",
+            "intune_name": "ASD24-WIN-SEC-APP-ApplicationManagement-v1",
+            "setting_count": 18,
+            "filename": "16_AppManagement_ASD24-WIN-SEC-APP-ApplicationManagement-v1.json"
+        },
+        {
+            "profile_key": "17_EdgeBrowser",
+            "category": "Microsoft Edge Browser Hardening",
+            "intune_name": "ASD24-WIN-SEC-EDGE-EdgeBrowserHardening-v1",
+            "setting_count": 19,
+            "filename": "17_EdgeBrowser_ASD24-WIN-SEC-EDGE-EdgeBrowserHardening-v1.json"
+        },
+        {
+            "profile_key": "18_PowerManagement",
+            "category": "Power Management",
+            "intune_name": "ASD24-WIN-UX-PWR-PowerManagement-v1",
+            "setting_count": 12,
+            "filename": "18_PowerManagement_ASD24-WIN-UX-PWR-PowerManagement-v1.json"
+        },
+        {
+            "profile_key": "19_PrivacyTelemetry",
+            "category": "Privacy, Telemetry & Cloud Services",
+            "intune_name": "ASD24-WIN-UX-PRIV-PrivacyTelemetryAndCloud-v1",
+            "setting_count": 13,
+            "filename": "19_PrivacyTelemetry_ASD24-WIN-UX-PRIV-PrivacyTelemetryAndCloud-v1.json"
+        },
+        {
+            "profile_key": "20_SmartScreenExploit",
+            "category": "SmartScreen & Exploit Protection",
+            "intune_name": "ASD24-WIN-SEC-SS-SmartScreenAndExploitProtection-v1",
+            "setting_count": 1,
+            "filename": "20_SmartScreenExploit_ASD24-WIN-SEC-SS-SmartScreenAndExploitProtection-v1.json"
+        }
+    ]
+}

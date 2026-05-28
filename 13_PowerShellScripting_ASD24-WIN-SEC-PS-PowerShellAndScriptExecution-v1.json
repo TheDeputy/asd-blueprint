@@ -1,0 +1,120 @@
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies/$entity",
+    "createdDateTime": "2024-11-06T03:13:42.8613453Z",
+    "creationSource": null,
+    "description": "ASD Windows Hardening Guidelines – PowerShell script block logging, execution policy, CMD and Registry editor restrictions. Ref: ASD SCB Windows Hardening 2024.",
+    "lastModifiedDateTime": "2024-11-06T03:13:42.8613453Z",
+    "name": "ASD24-WIN-SEC-PS-PowerShellAndScriptExecution-v1",
+    "platforms": "windows10",
+    "priorityMetaData": null,
+    "roleScopeTagIds": [
+        "0"
+    ],
+    "settingCount": 4,
+    "technologies": "mdm",
+    "id": "",
+    "templateReference": {
+        "templateId": "",
+        "templateFamily": "none",
+        "templateDisplayName": null,
+        "templateDisplayVersion": null
+    },
+    "settings": [
+        {
+            "id": "0",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "user_vendor_msft_policy_config_admx_shellcommandpromptregedittools_disableregedit",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "user_vendor_msft_policy_config_admx_shellcommandpromptregedittools_disableregedit_1",
+                    "children": [
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                            "settingDefinitionId": "user_vendor_msft_policy_config_admx_shellcommandpromptregedittools_disableregedit_disableregeditmode",
+                            "settingInstanceTemplateReference": null,
+                            "choiceSettingValue": {
+                                "settingValueTemplateReference": null,
+                                "value": "user_vendor_msft_policy_config_admx_shellcommandpromptregedittools_disableregedit_disableregeditmode_2",
+                                "children": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "1",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "user_vendor_msft_policy_config_admx_shellcommandpromptregedittools_disablecmd",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "user_vendor_msft_policy_config_admx_shellcommandpromptregedittools_disablecmd_1",
+                    "children": [
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                            "settingDefinitionId": "user_vendor_msft_policy_config_admx_shellcommandpromptregedittools_disablecmd_disablecmdscripts",
+                            "settingInstanceTemplateReference": null,
+                            "choiceSettingValue": {
+                                "settingValueTemplateReference": null,
+                                "value": "user_vendor_msft_policy_config_admx_shellcommandpromptregedittools_disablecmd_disablecmdscripts_1",
+                                "children": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "2",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging_1",
+                    "children": [
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                            "settingDefinitionId": "device_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging_enablescriptblockinvocationlogging",
+                            "settingInstanceTemplateReference": null,
+                            "choiceSettingValue": {
+                                "settingValueTemplateReference": null,
+                                "value": "device_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging_enablescriptblockinvocationlogging_0",
+                                "children": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "3",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_admx_powershellexecutionpolicy_enablescripts",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_admx_powershellexecutionpolicy_enablescripts_1",
+                    "children": [
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                            "settingDefinitionId": "device_vendor_msft_policy_config_admx_powershellexecutionpolicy_enablescripts_executionpolicy",
+                            "settingInstanceTemplateReference": null,
+                            "choiceSettingValue": {
+                                "settingValueTemplateReference": null,
+                                "value": "device_vendor_msft_policy_config_admx_powershellexecutionpolicy_enablescripts_executionpolicy_allsigned",
+                                "children": []
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

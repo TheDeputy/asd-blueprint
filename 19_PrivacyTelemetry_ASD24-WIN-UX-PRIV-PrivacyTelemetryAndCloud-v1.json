@@ -1,0 +1,214 @@
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies/$entity",
+    "createdDateTime": "2024-11-06T03:13:42.8613453Z",
+    "creationSource": null,
+    "description": "ASD Windows Hardening Guidelines – Privacy, telemetry and cloud services (Cortana, Spotlight, location, telemetry level, OneDrive sync, web search, MSDT, attachment zone info, Microsoft Accounts). Ref: ASD SCB Windows Hardening 2024.",
+    "lastModifiedDateTime": "2024-11-06T03:13:42.8613453Z",
+    "name": "ASD24-WIN-UX-PRIV-PrivacyTelemetryAndCloud-v1",
+    "platforms": "windows10",
+    "priorityMetaData": null,
+    "roleScopeTagIds": [
+        "0"
+    ],
+    "settingCount": 13,
+    "technologies": "mdm",
+    "id": "",
+    "templateReference": {
+        "templateId": "",
+        "templateFamily": "none",
+        "templateDisplayName": null,
+        "templateDisplayVersion": null
+    },
+    "settings": [
+        {
+            "id": "0",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_admx_msdt_msdtsupportprovider",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_admx_msdt_msdtsupportprovider_0",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "1",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "user_vendor_msft_policy_config_attachmentmanager_donotpreservezoneinformation",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "user_vendor_msft_policy_config_attachmentmanager_donotpreservezoneinformation_0",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "2",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "user_vendor_msft_policy_config_attachmentmanager_hidezoneinfomechanism",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "user_vendor_msft_policy_config_attachmentmanager_hidezoneinfomechanism_1",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "3",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_admx_sensors_disablelocationscripting_2",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_admx_sensors_disablelocationscripting_2_1",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "4",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_admx_locationprovideradm_disablewindowslocationprovider_1",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_admx_locationprovideradm_disablewindowslocationprovider_1_1",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "5",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_admx_msapolicy_microsoftaccount_disableuserauth",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_admx_msapolicy_microsoftaccount_disableuserauth_1",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "6",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_experience_allowcortana",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_experience_allowcortana_0",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "7",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "user_vendor_msft_policy_config_experience_allowwindowsspotlight",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "user_vendor_msft_policy_config_experience_allowwindowsspotlight_1",
+                    "children": [
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                            "settingDefinitionId": "user_vendor_msft_policy_config_experience_allowthirdpartysuggestionsinwindowsspotlight",
+                            "settingInstanceTemplateReference": null,
+                            "choiceSettingValue": {
+                                "settingValueTemplateReference": null,
+                                "value": "user_vendor_msft_policy_config_experience_allowthirdpartysuggestionsinwindowsspotlight_0",
+                                "children": []
+                            }
+                        },
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                            "settingDefinitionId": "device_vendor_msft_policy_config_experience_allowwindowsconsumerfeatures",
+                            "settingInstanceTemplateReference": null,
+                            "choiceSettingValue": {
+                                "settingValueTemplateReference": null,
+                                "value": "device_vendor_msft_policy_config_experience_allowwindowsconsumerfeatures_0",
+                                "children": []
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "8",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_search_allowindexingencryptedstoresoritems",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_search_allowindexingencryptedstoresoritems_0",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "9",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_search_donotusewebresults",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_search_donotusewebresults_0",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "10",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_system_allowlocation",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_system_allowlocation_0",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "11",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_system_allowtelemetry",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_system_allowtelemetry_0",
+                    "children": []
+                }
+            }
+        },
+        {
+            "id": "12",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_system_disableonedrivefilesync",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_system_disableonedrivefilesync_0",
+                    "children": []
+                }
+            }
+        }
+    ]
+}

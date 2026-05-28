@@ -1,0 +1,109 @@
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies/$entity",
+    "createdDateTime": "2024-11-06T03:13:42.8613453Z",
+    "creationSource": null,
+    "description": "ASD Windows Hardening Guidelines – Device installation restrictions by device ID and setup class, printer driver installation. Ref: ASD SCB Windows Hardening 2024.",
+    "lastModifiedDateTime": "2024-11-06T03:13:42.8613453Z",
+    "name": "ASD24-WIN-CORE-DEV-DeviceInstallation-v1",
+    "platforms": "windows10",
+    "priorityMetaData": null,
+    "roleScopeTagIds": [
+        "0"
+    ],
+    "settingCount": 3,
+    "technologies": "mdm",
+    "id": "",
+    "templateReference": {
+        "templateId": "",
+        "templateFamily": "none",
+        "templateDisplayName": null,
+        "templateDisplayVersion": null
+    },
+    "settings": [
+        {
+            "id": "0",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdeviceids",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdeviceids_1",
+                    "children": [
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                            "settingDefinitionId": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdeviceids_deviceinstall_ids_deny_retroactive",
+                            "settingInstanceTemplateReference": null,
+                            "choiceSettingValue": {
+                                "settingValueTemplateReference": null,
+                                "value": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdeviceids_deviceinstall_ids_deny_retroactive_1",
+                                "children": []
+                            }
+                        },
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+                            "settingDefinitionId": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdeviceids_deviceinstall_ids_deny_list",
+                            "settingInstanceTemplateReference": null,
+                            "simpleSettingCollectionValue": [
+                                {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                                    "settingValueTemplateReference": null,
+                                    "value": "d48179be-ec20-11d1-b6b8-00c04fa372a7"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "1",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdevicesetupclasses",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdevicesetupclasses_1",
+                    "children": [
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                            "settingDefinitionId": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdevicesetupclasses_deviceinstall_classes_deny_retroactive",
+                            "settingInstanceTemplateReference": null,
+                            "choiceSettingValue": {
+                                "settingValueTemplateReference": null,
+                                "value": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdevicesetupclasses_deviceinstall_classes_deny_retroactive_1",
+                                "children": []
+                            }
+                        },
+                        {
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+                            "settingDefinitionId": "device_vendor_msft_policy_config_deviceinstallation_preventinstallationofmatchingdevicesetupclasses_deviceinstall_classes_deny_list",
+                            "settingInstanceTemplateReference": null,
+                            "simpleSettingCollectionValue": [
+                                {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                                    "settingValueTemplateReference": null,
+                                    "value": "PCI\\CC_0C0010, PCI\\CC_0C0A"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "2",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_devices_preventusersfrominstallingprinterdriverswhenconnectingtosharedprinters",
+                "settingInstanceTemplateReference": null,
+                "choiceSettingValue": {
+                    "settingValueTemplateReference": null,
+                    "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_devices_preventusersfrominstallingprinterdriverswhenconnectingtosharedprinters_1",
+                    "children": []
+                }
+            }
+        }
+    ]
+}
