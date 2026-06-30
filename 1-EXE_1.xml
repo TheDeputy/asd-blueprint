@@ -1,0 +1,32 @@
+<RuleCollection Type="Exe" EnforcementMode="AuditOnly">
+  <FilePathRule Id="3bbcc8b0-c82f-4c7e-96d0-0cab8bdf7634" Name="C:\Users*\AppData\Local\Microsoft\WindowsApps\*" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="C:\Users*\AppData\Local\Microsoft\WindowsApps\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="921cc481-6e17-4653-8f75-050b80acca20" Name="(Default Rule) All files located in the Program Files folder" Description="Allows members of the Everyone group to run applications that are located in the Program Files folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="%PROGRAMFILES%\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="a61c8b2c-a319-4cd0-9690-d2177cad7b51" Name="(Default Rule) All files located in the Windows folder" Description="Allows members of the Everyone group to run applications that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="%WINDIR%\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="c9440901-e42a-4c84-9080-8ea192a61dce" Name="%WINDIR%\Temp\*.*" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+    <Conditions>
+      <FilePathCondition Path="%WINDIR%\Temp\*.*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="ddcfbebc-5446-4226-a339-24b69ca4d7fa" Name="C:\Users*\AppData\Local\Programs\Microsoft VS Code\*" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="C:\Users*\AppData\Local\Programs\Microsoft VS Code\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="fd686d83-a829-4351-8ff4-27c7de5755d2" Name="(Default Rule) All files" Description="Allows members of the local Administrators group to run all applications." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="*" />
+    </Conditions>
+  </FilePathRule>
+</RuleCollection>

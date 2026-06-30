@@ -1,0 +1,7 @@
+<RuleCollection Type="Msi" EnforcementMode="AuditOnly">
+  <FilePathRule Id="64ad46ff-0d71-4fa0-a30b-3f3d30c5433d" Name="(Default Rule) All Windows Installer files" Description="Allows members of the local Administrators group to run all Windows Installer files." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="*.*" />
+    </Conditions>
+  </FilePathRule>
+</RuleCollection>
