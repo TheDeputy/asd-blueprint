@@ -1,0 +1,71 @@
+<!--
+SUD-Common-AppControl-AppLocker Base-v1.1
+OMA-URI Row: EXE
+CSP Path: ./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/{GUID}/EXE/Policy
+Data type: String
+
+CHANGE FROM v1.0: EnforcementMode "NotConfigured" -> "AuditOnly"
+WHY: NotConfigured does NOT mean disabled - once a rule collection has any
+rules in it, NotConfigured silently defaults to ENFORCED. This collection
+was live-blocking since deployment. AuditOnly is the only mode that
+genuinely just logs without blocking. No rule logic changed, only the
+enforcement mode attribute.
+
+CHANGE IN v1.2 (post first audit build, 1 July 2026): added SYSTEM SID
+allow rule for %WINDIR%\* below. First full audit build generated ~900
+Event ID 8003 warnings, all reducing to 3 distinct binaries (svchost.exe,
+WmiPrvSE.exe, dllhost.exe) - all legitimate OS/WMI/COM activity running
+under the SYSTEM account. The existing Windows-folder allow rule was
+scoped to S-1-1-0 (Everyone) and S-1-5-32-544 (Administrators), neither
+of which covers SYSTEM (S-1-5-18) by default in AppLocker's evaluation -
+a known AppLocker gap, not a sign of unexpected activity. This same gap
+was also generating the bulk of the paired DLL-load warnings in the
+EXE-and-DLL log channel, since DLL loads are evaluated against this same
+EXE collection when no separate DLL rule collection is configured.
+Addition is ADDITIVE ONLY (new allow rule, nothing removed/tightened) -
+cannot newly block anything that currently works, safe to apply mid
+audit-window purely to reduce log noise to genuine findings.
+See TRACKED-exe-dll-system-sid-gap.md for full analysis.
+
+STATUS: Audit-only support layer. Real EXE control now lives in the WDAC
+base policy (DefaultWindows template). This collection stays audit
+indefinitely to feed MDE Advanced Hunting data for future Supplemental
+policy generation - not intended to move to Enforce.
+-->
+<RuleCollection Type="Exe" EnforcementMode="AuditOnly">
+  <FilePathRule Id="3bbcc8b0-c82f-4c7e-96d0-0cab8bdf7634" Name="C:\Users*\AppData\Local\Microsoft\WindowsApps\*" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="C:\Users*\AppData\Local\Microsoft\WindowsApps\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="7e1a2b3c-4d5e-4f60-9a1b-2c3d4e5f6071" Name="(SYSTEM) All files located in the Windows folder" Description="Allows the SYSTEM account to run applications and load DLLs located in the Windows folder. Added to resolve audit noise from svchost.exe, WmiPrvSE.exe, and dllhost.exe running under SYSTEM context, which were not covered by the Everyone or Administrators rules below." UserOrGroupSid="S-1-5-18" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="%WINDIR%\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="921cc481-6e17-4653-8f75-050b80acca20" Name="(Default Rule) All files located in the Program Files folder" Description="Allows members of the Everyone group to run applications that are located in the Program Files folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="%PROGRAMFILES%\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="a61c8b2c-a319-4cd0-9690-d2177cad7b51" Name="(Default Rule) All files located in the Windows folder" Description="Allows members of the Everyone group to run applications that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="%WINDIR%\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="c9440901-e42a-4c84-9080-8ea192a61dce" Name="%WINDIR%\Temp\*.*" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+    <Conditions>
+      <FilePathCondition Path="%WINDIR%\Temp\*.*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="ddcfbebc-5446-4226-a339-24b69ca4d7fa" Name="C:\Users*\AppData\Local\Programs\Microsoft VS Code\*" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="C:\Users*\AppData\Local\Programs\Microsoft VS Code\*" />
+    </Conditions>
+  </FilePathRule>
+  <FilePathRule Id="fd686d83-a829-4351-8ff4-27c7de5755d2" Name="(Default Rule) All files" Description="Allows members of the local Administrators group to run all applications." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+    <Conditions>
+      <FilePathCondition Path="*" />
+    </Conditions>
+  </FilePathRule>
+</RuleCollection>
